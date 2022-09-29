@@ -7,12 +7,11 @@
 header{
     display: flex;
     background-color: #3347B0;
-
     justify-content: space-between;
     width: 100vw;
+    height: 130px;
     height: auto;
-    left: 0px;
-    top: 2px;
+    padding: 15px;
     align-items: center;
     flex-direction: row;
 }
@@ -24,11 +23,10 @@ body{
 
 .head{
     display: flex;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
-    
     color: #FFFFFF;
 }
 
@@ -45,11 +43,14 @@ body{
     height: 90px;
 }
 
-logo-div{
+.logo-div{
     display: flex;
     flex-direction: row;
+    justify-items: center;
     align-items: center;
+    margin-left: 5%;
     gap: 15px;
+
    
 }
 

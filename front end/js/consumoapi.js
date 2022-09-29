@@ -19,7 +19,7 @@ const listarEstudantes = async(curso) => {
 
     const listaAlunos = await response.json()
 
-    return listaAlunos
+    return listaAlunos.alunos
 
 }
 const getAlunosStatus = async (status) => {

@@ -40,11 +40,13 @@ app.get('/alunos/', cors(), async function(request, response,next){
     //recebe a variavel nome por query String (indicada quando precisamos criar filtros)
     let courseName = request.query.courseName 
     let alunos = getAlunoCurso(courseName)
+    let alunosJSON = {}
 
     if(alunos)
     {
+        alunosJSON.alunos = alunos
         response.status(200);
-        response.json(alunos)
+        response.json(alunosJSON)
     }else{
         response.status(404) 
     }
@@ -55,11 +57,13 @@ app.get('/alunos/', cors(), async function(request, response,next){
     //recebe a variavel nome por query String (indicada quando precisamos criar filtros)
     let nomeCursos = request.query.nomeCursos 
     let cursos = getCurso(nomeCursos)
+    let cursosJSON = {}
 
     if(cursos)
     {
+        cursosJSON.cursos = cursos
         response.status(200);
-        response.json(cursos)
+        response.json(cursosJSON)
     }else{
         response.status(404) 
     }
@@ -93,7 +97,7 @@ app.get('/alunos/', cors(), async function(request, response,next){
     {
         listarJSON.alunos = disciplinas
         response.status(200);
-        response.json(disciplinas)
+        response.json(listarJSON)
     }else{
         response.status(404) 
     }
@@ -104,11 +108,13 @@ app.get('/alunos/', cors(), async function(request, response,next){
     //recebe a variavel nome por query String (indicada quando precisamos criar filtros)
     let conclusaoAno = request.query.conclusaoAno
     let conclusao = getAlunoConclusao(conclusaoAno)
+    let alunosJSON = {}
 
     if(conclusao)
     {
+        alunosJSON.alunos = conclusao
         response.status(200);
-        response.json(conclusao)
+        response.json(alunosJSON)
     }else{
         response.status(404) 
     }
@@ -119,11 +125,13 @@ app.get('/alunos/', cors(), async function(request, response,next){
     //recebe a variavel nome por query String (indicada quando precisamos criar filtros)
     let statusNome = request.query.statusNome
     let status = getAlunoStatus(statusNome)
+    let statusJSON = status
 
     if(status)
     {
+        statusJSON.alunos = status
         response.status(200);
-        response.json(status)
+        response.json(statusJSON)
     }else{
         response.status(404) 
     }

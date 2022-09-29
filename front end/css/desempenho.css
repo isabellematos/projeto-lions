@@ -43,13 +43,13 @@ body{
     height: 90px;
 }
 
-logo-div{
+.logo-div{
     display: flex;
     flex-direction: row;
-    align-items: row;
+    justify-items: center;
     align-items: center;
+    margin-left: 5%;
     gap: 15px;
-   
 }
 
 .sair-div{
